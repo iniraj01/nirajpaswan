@@ -3,7 +3,36 @@
 Hibernate + MySQL ka saara boilerplate (SessionFactory, Session, Transaction, commit/rollback) ek jar me.
 Aapko bas **database ka login**, **entity class** aur **operation** likhna hai.
 
-## 1. Jar banao (ek baar)
+**Requirements:** Java 17+, MySQL 8.x. Entity imports `jakarta.persistence.*` se hone chahiye.
+
+## Sabse aasan: Maven se use karo
+
+Apni `pom.xml` me ye add karo. Hibernate aur MySQL driver apne aap download ho jayenge.
+
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
+<dependency>
+    <groupId>com.github.iniraj01</groupId>
+    <artifactId>nirajpaswan</artifactId>
+    <version>v1.0.1</version>
+</dependency>
+```
+
+`<repositories>` `<project>` ke andar jata hai, aur `<dependency>` apne `<dependencies>` ke andar.
+Phir Eclipse me: project par right-click > Maven > Update Project.
+
+Maven nahi use karna? Neeche jar download karke add karne ka tareeka hai.
+
+## Jar se use karo (Maven ke bina)
+
+Releases page se `nirajpaswan-1.0.0-all.jar` download karke apne project ki libraries me add karo.
+Khud banana ho to:
 
 Maven chahiye (internet ke saath, kyunki dependencies download hoti hain):
 
